@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Employess>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Employess</title>
+    </head>
+    <body>
+        <h2>
+            All Employess Page
+        </h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Job</th>
+                    <th>Birth Date</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach(Employess emp in Model)
+            {
+                <tr>
+                    <td>@emp.EmployeeName</td>
+                    <td>@emp.Department</td>
+                    <td>@emp.JobTitle</td>
+                    <td>@emp.BirthDate.ToShortDateString()</td>
+                    <td>@emp.EmailAddress</td>
+                </tr>
+            }
+        </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+﻿@model Employess
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+   <form asp-action="Employees" method="post">
+       <h1>Employees Form</h1>
+
+       <div asp-validation-summary="All"></div>
+       <div>
+           <label asp-for="EmployeeName">Employee Name</label>
+           <input asp-for="EmployeeName"/>
+       </div>
+
+       <div>
+           <label asp-for="Department">Department</label>
+           <select asp-for="Department">
+               <option></option>
+               <option value="cs">Computer science</option>
+               <option value="it">information tech.</option>
+               <option value="is">information system</option>
+           </select>
+       </div>
+
+       <div>
+           <label asp-for="isActive">IsActive</label>
+           <input type="checkbox" asp-for="isActive" />
+       </div>
+
+       <div>
+           <label asp-for="JobTitle">JobTitle</label>
+           <input asp-for="JobTitle">
+       </div>
+        <div>
+           <label asp-for="BirthDate">BirthDate</label>
+           <input type="date" asp-for="BirthDate">
+       </div>
+        <div>
+           <label asp-for="EmailAddress">EmailAddress</label>
+           <input type="email" asp-for="EmailAddress">
+       </div>
+       <button type="submit">Save</button>
+
+   </form>
+</body>
+</html>
